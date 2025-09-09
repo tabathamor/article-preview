@@ -17,7 +17,7 @@
         font-family: "Manrope";
         src: url("../assets/static/Manrope-Bold.ttf") format("truetype");
         font-style: bold;
-        font-weight: 700;
+        font-weight: 600;
         font-display: swap;
 
     }
@@ -37,6 +37,9 @@
 
 @theme {
 
+    --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-man: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
 
     --text-preset-1: 20px;
     --text-preset-1--font-weight: bold;
@@ -76,4 +79,10 @@
     --spacing-800: 64px;
     --spacing-1300: 104px;
     --spacing-2000: 160px;
+}
+
+.card {
+    @apply max-w-[327px] shadow-xl;
+    @apply md:max-w-[608px] md:flex md:min-h-[346px];
+    @apply lg:max-w-[730px] lg:flex lg:min-h-[280px];
 }
