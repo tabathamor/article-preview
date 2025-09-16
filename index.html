@@ -8,72 +8,73 @@
     <link href="./dist/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-200 flex items-center justify-center min-h-screen w-full ">
-    <div class="card bg-white rounded-[10px] ">
+<body class="bg-grey-200 flex items-center justify-center min-h-screen p-6">
 
+    <div class="card bg-white rounded-[10px] ">
         <div class="md:min-w-[229px] ">
             <img src="./assets/images/drawers.jpg" alt="Green dresser with decor"
                 class="w-full h-auto object-cover rounded-t-[10px] md:rounded-l-lg md:rounded-tr-none md:h-full">
 
         </div>
 
-
-        <div class="m-400 md:m-500">
-            <p class="text-preset-1 text-grey-900 mb-300 md:hidden">
-                Shift the overall look and <br /> feel by adding these <br /> wonderful touches to<br /> furniture
-                in
-                your
-                home </p>
-            <p class="text-preset-1 text-grey-900 mb-300 hidden md:inline-flex">
-                Shift the overall look and feel by adding these wonderful touches to furniture
-                in
-                your
-                home </p>
-
-            <p class="text-preset-2-medium text-grey-500 mb-300">
-                Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and
-                uninviting.
+        <div class="p-8 md:p-10">
+            <h1 class="text-preset-1 text-grey-900 mb-300">
+                Shift the overall look and feel by adding these wonderful touches to furniture in your home
+            </h1>
+            <p class="text-preset-2-medium text-grey-500 mb-8">
+                Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting.
                 I've got some simple tips to help you make any room feel complete.
             </p>
 
-
-
-            <div id="authorSection" class="flex items-center justify-between ">
-                <div class="flex items-center space-x-4">
-                    <img src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton profile picture"
-                        class="w-10 h-10 rounded-full">
-                    <div>
-                        <p class="text-gray-900 text-preset-2 ">Michelle Appleton</p>
-                        <p class="text-gray-400 text-preset-2-medium">28 Jun 2020</p>
+            <div class="relative">
+                <div id="authorSection" class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img src="./assets/images/avatar-michelle.jpg" alt="Michelle Appleton profile picture"
+                            class="w-10 h-10 rounded-full">
+                        <div>
+                            <p class="text-preset-2 text-grey-900">Michelle Appleton</p>
+                            <p class="text-preset-2-medium text-grey-400">28 Jun 2020</p>
+                        </div>
                     </div>
+                    <button id="shareButton" aria-label="Share"
+                        class="w-8 h-8 rounded-full bg-grey-200 flex items-center justify-center z-20">
+                        <img src="./assets/images/icon-share.svg" alt="Share icon">
+                    </button>
                 </div>
 
-                <button id="shareButton" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-                    <img src="./assets/images/icon-share.svg">
-                </button>
+                <div id="shareTooltip" class="hidden absolute bottom-[120%] -right-[85px] z-10">
+                    <div class="bg-grey-900 shadow-xl rounded-lg flex items-center p-4 min-w-max">
+                        <p class="text-preset-3 text-grey-400 uppercase pr-4">Share</p>
+                        <div class="flex items-center space-x-4">
+                            <a href="#"><img src="./assets/images/icon-facebook.svg" alt="Facebook"></a>
+                            <a href="#"><img src="./assets/images/icon-twitter.svg" alt="Twitter"></a>
+                            <a href="#"><img src="./assets/images/icon-pinterest.svg" alt="Pinterest"></a>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-l-transparent border-t-[12px] border-t-grey-900 border-r-[12px] border-r-transparent">
+                    </div>
+                </div>
             </div>
         </div>
 
-
-        <div id="shareContent" class="hidden bg-grey-900 px-400 py-300 rounded-b-[10px] min-h-[76px] ">
-            <div class="flex items-center  justify-between w-full">
-
-                <div class="flex space-x-3">
-                    <p class="text-preset-3 pr-200 text-grey-400 uppercase">Share</p>
-
-                    <img src="./assets/images/icon-facebook.svg" alt="facebook">
-                    <img src="./assets/images/icon-twitter.svg" alt="twitter">
-                    <img src="./assets/images/icon-pinterest.svg" alt="pinterest">
+        <div id="shareContent" class="hidden bg-grey-900 px-8 py-6 rounded-b-[10px] md:hidden">
+            <div class="flex items-center">
+                <p class="text-preset-3 text-grey-400 uppercase pr-4">Share</p>
+                <div class="flex items-center space-x-4">
+                    <a href="#"><img src="./assets/images/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="./assets/images/icon-twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="./assets/images/icon-pinterest.svg" alt="Pinterest"></a>
                 </div>
-                <button id="shareButton2" class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
-                    <img src="./assets/images/icon-share.svg">
+                <button id="shareButton2" aria-label="Share"
+                    class="w-8 h-8 rounded-full bg-grey-500 flex items-center justify-center ml-auto">
+                    <img src="./assets/images/icon-share.svg" class="filter-white" alt="Share icon">
                 </button>
             </div>
         </div>
     </div>
 
     <script src="./src/main.js"></script>
-
 </body>
 
 </html>

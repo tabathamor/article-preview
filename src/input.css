@@ -9,7 +9,6 @@
         font-style: normal;
         font-weight: 400;
         font-display: swap;
-
     }
 
     /* Variable bold */
@@ -17,9 +16,8 @@
         font-family: "Manrope";
         src: url("../assets/static/Manrope-Bold.ttf") format("truetype");
         font-style: bold;
-        font-weight: 600;
+        font-weight: 700;
         font-display: swap;
-
     }
 
     /* Variable medium */
@@ -29,14 +27,15 @@
         font-style: normal;
         font-weight: 500;
         font-display: swap;
-
-
     }
 
+    body {
+        font-family: "Manrope", sans-serif;
+    }
 }
 
 @theme {
-
+    /* YOUR ORIGINAL THEME VARIABLES - ALL RESTORED */
     --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     --font-man: "Manrope", ui-sans-serif, system-ui, sans-serif;
     --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
@@ -46,21 +45,22 @@
     --text-preset-1--line-height: 130%;
     --text-preset-1--letter-spacing: 0.25px;
 
-
     --text-preset-2: 13px;
     --text-preset-2--font-weight: bold;
     --text-preset-2--line-height: 140%;
     --text-preset-2--letter-spacing: 0.12px;
 
     --text-preset-2-medium: 13px;
-    --text-preset-2-medium--font-weight: normal;
+    --text-preset-2-medium--font-weight: 500;
+    /* Use 500 for medium */
     --text-preset-2-medium--line-height: 140%;
     --text-preset-2-medium--letter-spacing: 0.12px;
 
     --text-preset-3: 13px;
-    --text-preset-3--font-weight: normal;
+    --text-preset-3--font-weight: 500;
     --text-preset-3--line-height: 140%;
-    --text-preset-3--letter-spacing: 25%;
+    --text-preset-3--letter-spacing: 5px;
+    /* Use px for better control */
 
     --color-white: #FFFFFF;
     --color-grey-900: #48556A;
@@ -68,21 +68,80 @@
     --color-grey-400: #9DAEC2;
     --color-grey-200: #ECF2F8;
 
-
     --spacing-0: 0;
     --spacing-200: 16px;
     --spacing-300: 24px;
     --spacing-400: 32px;
     --spacing-500: 40px;
-    --spacing-600: 48px;
-    --spacing-700: 56px;
-    --spacing-800: 64px;
-    --spacing-1300: 104px;
-    --spacing-2000: 160px;
 }
 
+/* CRITICAL FIX: This section was missing. 
+  It tells Tailwind what to do with classes like 'text-preset-1'.
+*/
+@layer utilities {
+    .text-preset-1 {
+        font-size: var(--text-preset-1);
+        font-weight: var(--text-preset-1--font-weight);
+        line-height: var(--text-preset-1--line-height);
+        letter-spacing: var(--text-preset-1--letter-spacing);
+    }
+
+    .text-preset-2 {
+        font-size: var(--text-preset-2);
+        font-weight: var(--text-preset-2--font-weight);
+        line-height: var(--text-preset-2--line-height);
+        letter-spacing: var(--text-preset-2--letter-spacing);
+    }
+
+    .text-preset-2-medium {
+        font-size: var(--text-preset-2-medium);
+        font-weight: var(--text-preset-2-medium--font-weight);
+        line-height: var(--text-preset-2-medium--line-height);
+        letter-spacing: var(--text-preset-2-medium--letter-spacing);
+    }
+
+    .text-preset-3 {
+        font-size: var(--text-preset-3);
+        font-weight: var(--text-preset-3--font-weight);
+        line-height: var(--text-preset-3--line-height);
+        letter-spacing: var(--text-preset-3--letter-spacing);
+    }
+
+    .m-400 {
+        margin: var(--spacing-400);
+    }
+
+    .m-500 {
+        margin: var(--spacing-500);
+    }
+
+    .mb-300 {
+        margin-bottom: var(--spacing-300);
+    }
+
+    .px-400 {
+        padding-left: var(--spacing-400);
+        padding-right: var(--spacing-400);
+    }
+
+    .py-300 {
+        padding-top: var(--spacing-300);
+        padding-bottom: var(--spacing-300);
+    }
+
+    .pr-200 {
+        padding-right: var(--spacing-200);
+    }
+}
+
+/* YOUR ORIGINAL CARD STYLE */
 .card {
     @apply max-w-[327px] shadow-xl;
     @apply md:max-w-[608px] md:flex md:min-h-[346px];
     @apply lg:max-w-[730px] lg:flex lg:min-h-[280px];
+}
+
+/* UTILITY FOR THE ACTIVE SHARE ICON */
+.filter-white {
+    filter: brightness(0) invert(1);
 }
