@@ -19,7 +19,7 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 ## Overview
 
-
+I built the Article Preview component with a mobile-first approach and then refined it for tablet and desktop. The layout adapts across breakpoints and the share interaction switches between a bottom bar on mobile and a floating tooltip on larger screens. The goal was a clean, accessible, and faithful recreation of the original design.
 
 ### The challenge
 
@@ -40,11 +40,11 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site- url.com)
+- Solution URL: [https://github.com/tabathamor/article-preview](https://github.com/tabathamor/article-preview)
+- Live Site URL: [https://article-preview-k2w36sg7o-tabathamors-projects.vercel.app/](https://your-live-site- url.com)
 
 ## My process
-
+I started by rereading the requirements and mapping the layout into simple building blocks. Even though I haven’t used vanilla JavaScript in a long time, I decided to implement the share interaction without any frameworks to keep the project lightweight. I built the mobile layout first, added the tablet/desktop breakpoint styles, and then wired the share toggle (including click-away behavior) with a few lines of JS. Finally, I did responsive checks and small accessibility touches (focus, semantics).
 ### Built with
 
 - Semantic HTML5 markup
@@ -54,53 +54,25 @@ Users should be able to:
 - Mobile-first workflow
 
 
+
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was mostly a refresher: small components still benefit from a clear mobile-first plan and clean utility classes.
 
-To see how you can add code snippets, see below:
+Re-practiced vanilla JS basics: toggling state with classList, adding click-away listeners, and using defer/DOMContentLoaded to avoid null DOM references.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+Positioning a floating tooltip reliably: reading button geometry with getBoundingClientRect() and keeping the arrow aligned even near viewport edges.
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+Tiny but useful details: ensuring responsive spacing remains consistent across breakpoints and preventing style “jumps” when switching from mobile bar to desktop tooltip.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
-### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@tabathamor](https://www.frontendmentor.io/profile/tabathamor)
+- Github - [@tabathamor](https://github.com/tabathamor)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
